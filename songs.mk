@@ -244,7 +244,7 @@ $(MID_SUBDIR)/mus_fortree.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G032 -V080
 
 $(MID_SUBDIR)/mus_oldale.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G019 -V080
+	$(MID) $< $@ -E -R$(STD_REVERB) -G000 -V080
 
 $(MID_SUBDIR)/mus_mt_pyre_exterior.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G080 -V080
@@ -400,7 +400,7 @@ $(MID_SUBDIR)/mus_rg_vermillion.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G172 -V090
 
 $(MID_SUBDIR)/mus_rg_route1.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G014 -V079
+	$(MID) $< $@ -E -R$(STD_REVERB) -G014 -V060
 
 $(MID_SUBDIR)/mus_rg_route3.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G152 -V083
