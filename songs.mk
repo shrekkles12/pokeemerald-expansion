@@ -172,7 +172,7 @@ $(MID_SUBDIR)/mus_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G013 -V080
 
 $(MID_SUBDIR)/mus_encounter_may.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G061 -V078
+	$(MID) $< $@ -E -R$(STD_REVERB) -G119 -V078
 
 $(MID_SUBDIR)/mus_encounter_female.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G053 -V072
