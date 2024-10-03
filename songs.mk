@@ -322,7 +322,7 @@ $(MID_SUBDIR)/mus_c_comm_center.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -V080
 
 $(MID_SUBDIR)/mus_poke_center.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G046 -V092
+	$(MID) $< $@ -E -R$(STD_REVERB) -G000 -V092
 
 $(MID_SUBDIR)/mus_b_pyramid.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G106 -V079
@@ -445,7 +445,7 @@ $(MID_SUBDIR)/mus_rg_mystery_gift.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G183 -V100
 
 $(MID_SUBDIR)/mus_rg_route24.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G151 -V086
+	$(MID) $< $@ -E -R$(STD_REVERB) -G117 -V086
 
 $(MID_SUBDIR)/mus_rg_teachy_tv_show.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G131 -V068

@@ -1,31 +1,31 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_poke_center_grp, voicegroup000
-	.equ	mus_poke_center_pri, 0
-	.equ	mus_poke_center_rev, 0
-	.equ	mus_poke_center_mvl, 127
-	.equ	mus_poke_center_key, 0
-	.equ	mus_poke_center_tbs, 1
-	.equ	mus_poke_center_exg, 0
-	.equ	mus_poke_center_cmp, 1
+	.equ	mus_poke_centre_grp, voicegroup000
+	.equ	mus_poke_centre_pri, 0
+	.equ	mus_poke_centre_rev, 0
+	.equ	mus_poke_centre_mvl, 127
+	.equ	mus_poke_centre_key, 0
+	.equ	mus_poke_centre_tbs, 1
+	.equ	mus_poke_centre_exg, 0
+	.equ	mus_poke_centre_cmp, 1
 
 	.section .rodata
-	.global	mus_poke_center
+	.global	mus_poke_centre
 	.align	2
 
 @**************** Track 1 (Midi-Chn.1) ****************@
 
-mus_poke_center_1:
-	.byte	KEYSH , mus_poke_center_key+0
+mus_poke_centre_1:
+	.byte	KEYSH , mus_poke_centre_key+0
 @ 000   ----------------------------------------
-	.byte	TEMPO , 50*mus_poke_center_tbs/2
+	.byte	TEMPO , 50*mus_poke_centre_tbs/2
 	.byte		VOICE , 1
 	.byte		PAN   , c_v-13
-	.byte		VOL   , 100*mus_poke_center_mvl/mxv
+	.byte		VOL   , 100*mus_poke_centre_mvl/mxv
 	.byte		PAN   , c_v-13
-	.byte		VOL   , 100*mus_poke_center_mvl/mxv
+	.byte		VOL   , 100*mus_poke_centre_mvl/mxv
 	.byte	W06
-mus_poke_center_1_B1:
+mus_poke_centre_1_B1:
 	.byte	W06
 	.byte		N12   , En3 , v080
 	.byte		N12   , Gn3 , v072
@@ -191,27 +191,27 @@ mus_poke_center_1_B1:
 	.byte	W12
 	.byte	W12
 @ 008   ----------------------------------------
-	.byte		N03   , En5 , v064
-	.byte	W03
-	.byte		        Fs5 
-	.byte	W03
+	.byte		N01   , En5 , v076
+	.byte	W01
+	.byte		        Fs5 , v072
+	.byte	W02
 	.byte		        Dn5 
-	.byte	W03
+	.byte	W01
 	.byte		        An4 
-	.byte	W03
-	.byte		N36   , Cs5 , v072
-	.byte	W36
-	.byte		N03   , En4 , v076
-	.byte	W03
-	.byte		        Fs4 , v064
-	.byte	W03
+	.byte	W02
+	.byte		N36   , Cs5 
+	.byte	W42
+	.byte		N01   , En4 , v076
+	.byte	W01
+	.byte		        Fs4 , v072
+	.byte	W02
 	.byte		        Dn4 
-	.byte	W03
+	.byte	W01
 	.byte		        An3 
-	.byte	W03
-	.byte		N36   , Cs4 , v072
-	.byte	W32
-	.byte	W03
+	.byte	W02
+	.byte		N36   , Cs4 
+	.byte	W40
+	.byte	W01
 	.byte	W01
 @ 009   ----------------------------------------
 	.byte		N04   , Cn3 , v076
@@ -251,15 +251,17 @@ mus_poke_center_1_B1:
 	.byte	W03
 	.byte		        Dn5 , v060
 	.byte	W03
-	.byte		        Cn5 , v064
-	.byte	W03
+	.byte		N02   , Cn5 
+	.byte	W02
 	.byte		        Bn4 
-	.byte	W03
+	.byte	W02
 	.byte		        An4 
 	.byte	W03
 	.byte		        Gn4 
+	.byte	W02
+	.byte		        Fs4 
 	.byte	W03
-	.byte		        Fs4 , v060
+	.byte		N03   
 	.byte	W03
 	.byte		        En4 
 	.byte	W03
@@ -267,15 +269,17 @@ mus_poke_center_1_B1:
 	.byte	W03
 	.byte		        Cn4 
 	.byte	W03
-	.byte		        Bn3 , v064
-	.byte	W03
-	.byte		        An3 
-	.byte	W03
+	.byte		N02   , Bn3 , v064
+	.byte	W02
+	.byte		        An3 , v060
+	.byte	W02
 	.byte		        Gn3 
 	.byte	W03
 	.byte		        Fs3 
+	.byte	W02
+	.byte		        Dn3 
 	.byte	W03
-	.byte		        En3 , v060
+	.byte		N03   , En3 
 	.byte	W03
 	.byte		        Dn3 
 	.byte	W03
@@ -283,15 +287,17 @@ mus_poke_center_1_B1:
 	.byte	W03
 	.byte		        Bn2 
 	.byte	W03
-	.byte		        An2 , v064
-	.byte	W03
+	.byte		N02   , An2 
+	.byte	W02
 	.byte		        Bn2 
+	.byte	W02
+	.byte		        Cn3 , v064
 	.byte	W03
-	.byte		        Cn3 
+	.byte		        Dn3 , v072
+	.byte	W02
+	.byte		        Fs3 , v084
 	.byte	W03
-	.byte		        Dn3 
-	.byte	W03
-	.byte		        En3 , v076
+	.byte		N03   , En3 , v076
 	.byte	W03
 	.byte		        Fs3 , v084
 	.byte	W03
@@ -309,39 +315,47 @@ mus_poke_center_1_B1:
 	.byte	W03
 	.byte		        En4 
 	.byte	W03
-	.byte		        Fs4 
+	.byte		N02   , Fs4 
+	.byte	W02
+	.byte		        Gs4 
+	.byte	W02
+	.byte		        As4 
 	.byte	W03
-	.byte		        Gs4 , v064
+	.byte		        Bn4 
+	.byte	W02
+	.byte		        Ds5 
 	.byte	W03
-	.byte		        As4 , v084
+	.byte		N01   , Cs5 
+	.byte	W01
+	.byte		        Ds5 
+	.byte	W02
+	.byte		N02   , En5 
 	.byte	W03
-	.byte		        Bn4 , v064
-	.byte	W03
-	.byte		        Cs5 , v084
-	.byte	W03
-	.byte		        Ds5 , v064
-	.byte	W03
-	.byte		        En5 
-	.byte	W03
-	.byte		        Fs5 
-	.byte	W03
+	.byte		N01   , Fs5 
+	.byte	W01
 	.byte		        Gs5 
+	.byte	W02
+	.byte		N02   , As5 
 	.byte	W03
-	.byte		        As5 , v084
+	.byte		N03   , Gs5 
+	.byte	W03
+	.byte		        As5 
 	.byte	W03
 	.byte		        Bn5 
 	.byte	W03
 	.byte		        Cs6 
 	.byte	W03
-	.byte		        Ds6 , v088
-	.byte	W03
-	.byte		        En6 , v064
-	.byte	W03
+	.byte		N02   , Ds6 , v088
+	.byte	W02
+	.byte		        En6 , v084
+	.byte	W02
 	.byte		        Ds6 
 	.byte	W03
-	.byte		        Cs6 
+	.byte		        Cs6 , v080
+	.byte	W02
+	.byte		        Ds6 , v084
 	.byte	W03
-	.byte		        Bn5 
+	.byte		N03   , Bn5 , v072
 	.byte	W03
 	.byte		        As5 , v068
 	.byte	W03
@@ -374,35 +388,37 @@ mus_poke_center_1_B1:
 	.byte	W02
 	.byte		N21   , Fs4 , v076
 	.byte	W21
-	.byte		N01   , Dn4 , v064
-	.byte	W01
-	.byte		        Gn4 , v072
-	.byte	W02
-	.byte		N21   , Fs4 
-	.byte	W21
-	.byte		N01   , Dn4 , v068
+	.byte		N01   , Dn4 , v072
 	.byte	W01
 	.byte		        Gn4 
 	.byte	W02
+	.byte		N21   , Fs4 
+	.byte	W21
+	.byte		N01   , Dn3 , v068
+	.byte	W01
+	.byte		        Gn3 
+	.byte	W02
 @ 013   ----------------------------------------
-	.byte		N90   , Fs4 , v072
+	.byte		N90   , Fs3 , v072
 	.byte	W84
 	.byte	GOTO
-	 .word	mus_poke_center_1_B1
-mus_poke_center_1_B2:
+	 .word	mus_poke_centre_1_B1
+mus_poke_centre_1_B2:
 	.byte	W11
+	.byte	W01
+@ 014   ----------------------------------------
 	.byte	FINE
 
 @**************** Track 2 (Midi-Chn.2) ****************@
 
-mus_poke_center_2:
-	.byte	KEYSH , mus_poke_center_key+0
+mus_poke_centre_2:
+	.byte	KEYSH , mus_poke_centre_key+0
 @ 000   ----------------------------------------
 	.byte		VOICE , 48
 	.byte		PAN   , c_v-48
-	.byte		VOL   , 108*mus_poke_center_mvl/mxv
+	.byte		VOL   , 108*mus_poke_centre_mvl/mxv
 	.byte	W06
-mus_poke_center_2_B1:
+mus_poke_centre_2_B1:
 	.byte	W90
 @ 001   ----------------------------------------
 	.byte	W96
@@ -487,21 +503,22 @@ mus_poke_center_2_B1:
 	.byte		N44   , An3 
 	.byte	W36
 	.byte	GOTO
-	 .word	mus_poke_center_2_B1
-mus_poke_center_2_B2:
-	.byte	W11
+	 .word	mus_poke_centre_2_B1
+mus_poke_centre_2_B2:
+	.byte	W12
+@ 014   ----------------------------------------
 	.byte	FINE
 
 @**************** Track 3 (Midi-Chn.3) ****************@
 
-mus_poke_center_3:
-	.byte	KEYSH , mus_poke_center_key+0
+mus_poke_centre_3:
+	.byte	KEYSH , mus_poke_centre_key+0
 @ 000   ----------------------------------------
 	.byte		VOICE , 48
 	.byte		PAN   , c_v+31
-	.byte		VOL   , 103*mus_poke_center_mvl/mxv
+	.byte		VOL   , 103*mus_poke_centre_mvl/mxv
 	.byte	W06
-mus_poke_center_3_B1:
+mus_poke_centre_3_B1:
 	.byte	W90
 @ 001   ----------------------------------------
 	.byte	W96
@@ -533,31 +550,31 @@ mus_poke_center_3_B1:
 	.byte		        Fs1 , v072
 	.byte	W48
 @ 011   ----------------------------------------
-	.byte		N90   , Bn1 , v064
+	.byte		N96   , Bn1 , v076
 	.byte	W96
 @ 012   ----------------------------------------
-	.byte		TIE   , Dn2 
+	.byte		TIE   , Dn2 , v068
 	.byte	W96
 @ 013   ----------------------------------------
-	.byte	W66
-	.byte		EOT   
-	.byte	W18
+	.byte	W84
 	.byte	GOTO
-	 .word	mus_poke_center_3_B1
-mus_poke_center_3_B2:
-	.byte	W11
+	 .word	mus_poke_centre_3_B1
+mus_poke_centre_3_B2:
+	.byte	W12
+	.byte		EOT   , Dn2 
+@ 014   ----------------------------------------
 	.byte	FINE
 
 @**************** Track 4 (Midi-Chn.4) ****************@
 
-mus_poke_center_4:
-	.byte	KEYSH , mus_poke_center_key+0
+mus_poke_centre_4:
+	.byte	KEYSH , mus_poke_centre_key+0
 @ 000   ----------------------------------------
 	.byte		VOICE , 48
 	.byte		PAN   , c_v+47
-	.byte		VOL   , 106*mus_poke_center_mvl/mxv
+	.byte		VOL   , 106*mus_poke_centre_mvl/mxv
 	.byte	W06
-mus_poke_center_4_B1:
+mus_poke_centre_4_B1:
 	.byte	W90
 @ 001   ----------------------------------------
 	.byte	W96
@@ -629,28 +646,29 @@ mus_poke_center_4_B1:
 @ 013   ----------------------------------------
 	.byte		N24   , Gn3 , v068
 	.byte	W24
-	.byte		N60   , Fs3 , v064
+	.byte		N68   , Fs3 , v064
 	.byte	W60
 	.byte	GOTO
-	 .word	mus_poke_center_4_B1
-mus_poke_center_4_B2:
-	.byte	W11
+	 .word	mus_poke_centre_4_B1
+mus_poke_centre_4_B2:
+	.byte	W12
+@ 014   ----------------------------------------
 	.byte	FINE
 
 @******************************************************@
 	.align	2
 
-mus_poke_center:
+mus_poke_centre:
 	.byte	4	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	mus_poke_center_pri	@ Priority
-	.byte	mus_poke_center_rev	@ Reverb.
+	.byte	mus_poke_centre_pri	@ Priority
+	.byte	mus_poke_centre_rev	@ Reverb.
 
-	.word	mus_poke_center_grp
+	.word	mus_poke_centre_grp
 
-	.word	mus_poke_center_1
-	.word	mus_poke_center_2
-	.word	mus_poke_center_3
-	.word	mus_poke_center_4
+	.word	mus_poke_centre_1
+	.word	mus_poke_centre_2
+	.word	mus_poke_centre_3
+	.word	mus_poke_centre_4
 
 	.end
