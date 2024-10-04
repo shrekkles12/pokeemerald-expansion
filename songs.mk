@@ -118,7 +118,7 @@ $(MID_SUBDIR)/mus_underwater.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G057 -V094
 
 $(MID_SUBDIR)/mus_intro.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G060 -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G119 -V090
 
 $(MID_SUBDIR)/mus_hall_of_fame.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G082 -V078
@@ -610,7 +610,7 @@ $(MID_SUBDIR)/mus_credits.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G101 -V100
 
 $(MID_SUBDIR)/mus_title.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G059 -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G119 -V090
 
 $(MID_SUBDIR)/mus_fallarbor.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G083 -V100

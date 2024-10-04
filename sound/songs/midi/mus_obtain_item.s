@@ -1,12 +1,12 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_obtain_item_grp, voicegroup012
-	.equ	mus_obtain_item_pri, 5
-	.equ	mus_obtain_item_rev, reverb_set+50
-	.equ	mus_obtain_item_mvl, 90
+	.equ	mus_obtain_item_grp, voicegroup000
+	.equ	mus_obtain_item_pri, 0
+	.equ	mus_obtain_item_rev, 0
+	.equ	mus_obtain_item_mvl, 127
 	.equ	mus_obtain_item_key, 0
 	.equ	mus_obtain_item_tbs, 1
-	.equ	mus_obtain_item_exg, 1
+	.equ	mus_obtain_item_exg, 0
 	.equ	mus_obtain_item_cmp, 1
 
 	.section .rodata
@@ -18,46 +18,25 @@
 mus_obtain_item_1:
 	.byte	KEYSH , mus_obtain_item_key+0
 @ 000   ----------------------------------------
-	.byte	W12
-@ 001   ----------------------------------------
-	.byte	TEMPO , 190*mus_obtain_item_tbs/2
-	.byte		VOICE , 46
-	.byte		VOL   , 127*mus_obtain_item_mvl/mxv
-	.byte		PAN   , c_v-24
-	.byte		N16   , Gs4 , v080
-	.byte	W08
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		        0
-	.byte	W08
-	.byte		N06   , Ds4 
-	.byte	W08
-	.byte		        Gs4 
-	.byte	W08
-	.byte		        Ds4 
-	.byte	W08
-	.byte		N08   , As4 
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-@ 002   ----------------------------------------
-	.byte		N48   , Gs4 
-	.byte	W16
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		VOL   , 116*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        102*mus_obtain_item_mvl/mxv
+	.byte	TEMPO , 150*mus_obtain_item_tbs/2
+	.byte		VOICE , 56
+	.byte		PAN   , c_v+17
+	.byte		VOL   , 105*mus_obtain_item_mvl/mxv
+	.byte		N03   , Gn4 , v104
 	.byte	W07
-	.byte		        58*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        20*mus_obtain_item_mvl/mxv
+	.byte		        Ds4 , v100
+	.byte	W08
+	.byte		N04   , Gn4 
+	.byte	W09
+	.byte		N03   , As4 
 	.byte	W07
-	.byte		MOD   , 0
+	.byte		        Gn4 
+	.byte	W08
+	.byte		N04   , As4 
+	.byte	W09
+	.byte		N48   , Ds5 , v104
 	.byte	W48
-@ 003   ----------------------------------------
+@ 001   ----------------------------------------
 	.byte	FINE
 
 @**************** Track 2 (Midi-Chn.2) ****************@
@@ -65,45 +44,24 @@ mus_obtain_item_1:
 mus_obtain_item_2:
 	.byte	KEYSH , mus_obtain_item_key+0
 @ 000   ----------------------------------------
-	.byte	W12
-@ 001   ----------------------------------------
-	.byte		VOICE , 46
-	.byte		VOL   , 127*mus_obtain_item_mvl/mxv
-	.byte		PAN   , c_v+0
-	.byte		N16   , Cn5 , v104
-	.byte	W08
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		        0
-	.byte	W08
-	.byte		N06   
-	.byte	W08
-	.byte		N06   
-	.byte	W08
-	.byte		N06   
-	.byte	W08
-	.byte		N08   , Cs5 
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-@ 002   ----------------------------------------
-	.byte		N48   , Cn5 
-	.byte	W16
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		VOL   , 116*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        102*mus_obtain_item_mvl/mxv
+	.byte		VOICE , 56
+	.byte		PAN   , c_v+17
+	.byte		VOL   , 105*mus_obtain_item_mvl/mxv
+	.byte		N03   , As3 , v104
 	.byte	W07
-	.byte		        58*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        20*mus_obtain_item_mvl/mxv
+	.byte		        Ds3 , v100
+	.byte	W08
+	.byte		N04   , As3 
+	.byte	W09
+	.byte		N03   , Ds4 
 	.byte	W07
-	.byte		MOD   , 0
+	.byte		        As3 
+	.byte	W08
+	.byte		N04   , Ds4 
+	.byte	W09
+	.byte		N48   , Gn4 , v104
 	.byte	W48
-@ 003   ----------------------------------------
+@ 001   ----------------------------------------
 	.byte	FINE
 
 @**************** Track 3 (Midi-Chn.3) ****************@
@@ -111,37 +69,18 @@ mus_obtain_item_2:
 mus_obtain_item_3:
 	.byte	KEYSH , mus_obtain_item_key+0
 @ 000   ----------------------------------------
-	.byte	W12
+	.byte		VOICE , 47
+	.byte		PAN   , c_v+25
+	.byte		VOL   , 100*mus_obtain_item_mvl/mxv
+	.byte		N24   , Ds2 , v104
+	.byte	W24
+	.byte		        As1 , v096
+	.byte	W24
+	.byte		        Ds2 , v108
+	.byte	W24
+	.byte		        Ds1 , v092
+	.byte	W24
 @ 001   ----------------------------------------
-	.byte		VOICE , 58
-	.byte		VOL   , 127*mus_obtain_item_mvl/mxv
-	.byte		N16   , Gs1 , v120
-	.byte	W24
-	.byte		N06   
-	.byte	W08
-	.byte		N06   
-	.byte	W08
-	.byte		N06   
-	.byte	W08
-	.byte		N08   , Fs1 
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-	.byte		        Gn1 
-	.byte	W16
-@ 002   ----------------------------------------
-	.byte		N48   , Gs1 
-	.byte	W24
-	.byte		VOL   , 116*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        102*mus_obtain_item_mvl/mxv
-	.byte	W07
-	.byte		        58*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        20*mus_obtain_item_mvl/mxv
-	.byte	W54
-	.byte	W01
-@ 003   ----------------------------------------
 	.byte	FINE
 
 @**************** Track 4 (Midi-Chn.4) ****************@
@@ -149,47 +88,42 @@ mus_obtain_item_3:
 mus_obtain_item_4:
 	.byte	KEYSH , mus_obtain_item_key+0
 @ 000   ----------------------------------------
-	.byte	W12
+	.byte		VOICE , 1
+	.byte		PAN   , c_v-13
+	.byte		VOL   , 100*mus_obtain_item_mvl/mxv
+	.byte		N06   , As3 , v104
+	.byte	W06
+	.byte		        Cn4 , v100
+	.byte	W06
+	.byte		        Dn4 
+	.byte	W06
+	.byte		        Ds4 , v104
+	.byte	W06
+	.byte		        Fn4 
+	.byte	W06
+	.byte		        Gn4 , v108
+	.byte	W06
+	.byte		        An4 , v112
+	.byte	W06
+	.byte		        As4 
+	.byte	W06
+	.byte		N03   , Ds5 , v120
+	.byte	W03
+	.byte		        Fn5 , v112
+	.byte	W03
+	.byte		        Gn5 
+	.byte	W04
+	.byte		        An5 
+	.byte	W03
+	.byte		        As5 
+	.byte	W04
+	.byte		        Cn6 
+	.byte	W03
+	.byte		        Dn6 
+	.byte	W04
+	.byte		N22   , Ds6 
+	.byte	W24
 @ 001   ----------------------------------------
-	.byte		VOICE , 82
-	.byte		VOL   , 127*mus_obtain_item_mvl/mxv
-	.byte		XCMD  , xIECV , 8
-	.byte		        xIECL , 8
-	.byte		PAN   , c_v-48
-	.byte		N16   , Cn4 , v036
-	.byte	W08
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		        0
-	.byte	W08
-	.byte		N06   , Gs3 
-	.byte	W08
-	.byte		        Cn4 
-	.byte	W08
-	.byte		        Gs3 
-	.byte	W08
-	.byte		N08   , As3 
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-@ 002   ----------------------------------------
-	.byte		N48   , Gs3 
-	.byte	W16
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		VOL   , 116*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        102*mus_obtain_item_mvl/mxv
-	.byte	W07
-	.byte		        58*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        20*mus_obtain_item_mvl/mxv
-	.byte	W07
-	.byte		MOD   , 0
-	.byte	W48
-@ 003   ----------------------------------------
 	.byte	FINE
 
 @**************** Track 5 (Midi-Chn.5) ****************@
@@ -197,47 +131,13 @@ mus_obtain_item_4:
 mus_obtain_item_5:
 	.byte	KEYSH , mus_obtain_item_key+0
 @ 000   ----------------------------------------
-	.byte	W12
+	.byte		VOICE , 1
+	.byte		PAN   , c_v-13
+	.byte		VOL   , 100*mus_obtain_item_mvl/mxv
+	.byte	W72
+	.byte		N24   , Gn5 , v076
+	.byte	W24
 @ 001   ----------------------------------------
-	.byte		VOICE , 83
-	.byte		VOL   , 127*mus_obtain_item_mvl/mxv
-	.byte		XCMD  , xIECV , 8
-	.byte		        xIECL , 8
-	.byte		PAN   , c_v+48
-	.byte		N16   , Gs3 , v036
-	.byte	W08
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		        0
-	.byte	W08
-	.byte		N06   , Ds3 
-	.byte	W08
-	.byte		        Gs3 
-	.byte	W08
-	.byte		        Ds3 
-	.byte	W08
-	.byte		N08   , Fs3 
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-@ 002   ----------------------------------------
-	.byte		N48   , Ds3 
-	.byte	W16
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		VOL   , 116*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        102*mus_obtain_item_mvl/mxv
-	.byte	W07
-	.byte		        58*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        20*mus_obtain_item_mvl/mxv
-	.byte	W07
-	.byte		MOD   , 0
-	.byte	W48
-@ 003   ----------------------------------------
 	.byte	FINE
 
 @**************** Track 6 (Midi-Chn.6) ****************@
@@ -245,45 +145,26 @@ mus_obtain_item_5:
 mus_obtain_item_6:
 	.byte	KEYSH , mus_obtain_item_key+0
 @ 000   ----------------------------------------
+	.byte		VOICE , 48
+	.byte		PAN   , c_v+31
+	.byte		VOL   , 90*mus_obtain_item_mvl/mxv
+	.byte		N12   , Ds1 , v104
 	.byte	W12
+	.byte		N06   , Fn1 , v100
+	.byte	W06
+	.byte		        Gn1 
+	.byte	W06
+	.byte		N12   , As1 , v104
+	.byte	W12
+	.byte		N06   , Cn2 , v108
+	.byte	W06
+	.byte		        Dn2 
+	.byte	W06
+	.byte		N24   , Ds2 , v116
+	.byte	W24
+	.byte		        Ds1 , v108
+	.byte	W24
 @ 001   ----------------------------------------
-	.byte		VOICE , 46
-	.byte		PAN   , c_v+24
-	.byte		VOL   , 127*mus_obtain_item_mvl/mxv
-	.byte		N16   , Ds4 , v080
-	.byte	W08
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		        0
-	.byte	W08
-	.byte		N06   , Cn4 
-	.byte	W08
-	.byte		        Ds4 
-	.byte	W08
-	.byte		        Cn4 
-	.byte	W08
-	.byte		N08   , Fs4 
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-	.byte		N08   
-	.byte	W16
-@ 002   ----------------------------------------
-	.byte		N48   , Ds4 
-	.byte	W16
-	.byte		MOD   , 5
-	.byte	W08
-	.byte		VOL   , 116*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        102*mus_obtain_item_mvl/mxv
-	.byte	W07
-	.byte		        58*mus_obtain_item_mvl/mxv
-	.byte	W05
-	.byte		        20*mus_obtain_item_mvl/mxv
-	.byte	W07
-	.byte		MOD   , 0
-	.byte	W48
-@ 003   ----------------------------------------
 	.byte	FINE
 
 @******************************************************@
