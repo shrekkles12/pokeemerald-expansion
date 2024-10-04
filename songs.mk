@@ -619,7 +619,7 @@ $(MID_SUBDIR)/mus_mt_chimney.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G052 -V078
 
 $(MID_SUBDIR)/mus_follow_me.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G066 -V074
+	$(MID) $< $@ -E -R$(STD_REVERB) -G117 -V074
 
 $(MID_SUBDIR)/mus_vs_frontier_brain.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G115 -V090 -P1
