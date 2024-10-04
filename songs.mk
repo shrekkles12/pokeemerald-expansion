@@ -163,7 +163,7 @@ $(MID_SUBDIR)/mus_slateport.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G079 -V070
 
 $(MID_SUBDIR)/mus_poke_mart.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G050 -V085
+	$(MID) $< $@ -E -R$(STD_REVERB) -G119 -V085
 
 $(MID_SUBDIR)/mus_oceanic_museum.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G023 -V080
